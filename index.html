@@ -58,6 +58,7 @@
           <th>Puntos que aborda por aspecto ambiental</th>
           <th>Requisitos legales aplicables</th>
           <th>Requisitos legales aplicables B</th>
+          <th>Proveedor Reciclador, Recolector</th>
         </tr>
       </thead>
       <!-- Table head -->
@@ -144,6 +145,7 @@
         var a30 = data.feed.entry[i]['gsx$puntosqueabordaporaspectoambiental']['$t'];
         var a31 = data.feed.entry[i]['gsx$requisitoslegalesaplicables']['$t'];
         var a32 = data.feed.entry[i]['gsx$requisitoslegalesaplicablesb']['$t'];
+        var a33 = data.feed.entry[i]['gsx$proveedorrecicladorrecolector']['$t'];
 
         $(document).ready(function() {
           $('.modal').modal();
@@ -287,6 +289,10 @@
           '  <div class="collapsible-body"><span>' + a32 + '</span></div>' +
           '</li>' +
           '</ul> ' +
+          '</td>' +
+
+          '<td>' +
+          a33 +
           '</td>' +
 
           '</tr>'
