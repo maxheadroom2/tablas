@@ -55,6 +55,8 @@
           <th>Control Físico</th>
           <th>Control Documental</th>
           <th>Control Administrativo</th>
+          <th>Fecha de ultima revision</th>
+          <th>Fecha de proxima revision</th>
           <th>Puntos que aborda por aspecto ambiental</th>
           <th>Requisitos legales aplicables</th>
           <th>Requisitos legales aplicables B</th>
@@ -146,6 +148,8 @@
         var a31 = data.feed.entry[i]['gsx$requisitoslegalesaplicables']['$t'];
         var a32 = data.feed.entry[i]['gsx$requisitoslegalesaplicablesb']['$t'];
         var a33 = data.feed.entry[i]['gsx$proveedorrecicladorrecolector']['$t'];
+        var a34 = data.feed.entry[i]['gsx$fechadeultimarevision']['$t'];
+        var a35 = data.feed.entry[i]['gsx$fechadeproximarevision']['$t'];
 
         $(document).ready(function() {
           $('.modal').modal();
@@ -265,6 +269,16 @@
           '</td>' +
 
           '<td>' +
+          a34  +
+          '</td>' +
+
+          '<td>' +
+          a35  +
+          '</td>' +
+
+
+
+          '<td>' +
           '<ul class="collapsible">' +
           '<li>' +
           '<div class="collapsible-header" style="width: 350px"><i class="material-icons">arrow_drop_down</i>Ver</div>' +
@@ -292,7 +306,7 @@
           '</td>' +
 
           '<td>' +
-          a33 +
+          a33  +
           '</td>' +
 
           '</tr>'
