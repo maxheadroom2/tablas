@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="row text-center ">
+
+
+    <!-- Table  -->
+    <table class="table centered highlight striped responsive-table bordered" id="testTable">
+      <!-- Table head -->
+      <thead>
+        <tr>
+          <th>Area / Origen / Fuente</th>
+          <th>Actividades / Suceso</th>
+          <th>Sub proceso u operación / detalles</th>
+          <th>Aspecto Ambiental / Sensibilidad del medio</th>
+          <th>Tipo</th>
+          <th>Impacto ambiental / Efecto</th>
+          <th>Descripción</th>
+          <th>Material / Nombre comercial</th>
+          <th>Quimico</th>
+          <th>Nº CAS / NA (no aplica)</th>
+          <th>Nombre del contenedor</th>
+          <th>Directo / Indirecto</th>
+          <th>Sensibilidad del medio</th>
+          <th>Magnitud</th>
+          <th>Toxicidad / Peligro</th>
+          <th>Normal</th>
+          <th>Anormal</th>
+          <th>Accidente Incid.</th>
+          <th>N° de contenedor al que se integran</th>
+          <th>Cuestiones (Internas, Externas)</th>
+          <th>Probabilidad</th>
+          <th>Grado de Riesgo</th>
+          <th>Significancia</th>
+          <th>Se puede influir</th>
+          <th>Partes Interesadas</th>
+          <th>Analisis de grupo de interes</th>
+          <th>Control Físico</th>
+          <th>Control Documental</th>
+          <th>Control Administrativo</th>
+          <th>Puntos que aborda por aspecto ambiental</th>
+          <th>Requisitos legales aplicables</th>
+          <th>Requisitos legales aplicables B</th>
+        </tr>
+      </thead>
+      <!-- Table head -->
+      <!-- Table body -->
+
+      <!-- Modal Trigger -->
+
+
+
+
+      <!-- Modal Structure -->
+
+      <tbody id="demo">
+      </tbody>
+
+
+      <!-- Table body -->
+    </table>
+    <!-- Table  -->
+
+  </div>
+
+
+
+  <!-- Start your project here-->
+
+  <!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+
+  <script type="text/javascript">
+    $.getJSON("https://spreadsheets.google.com/feeds/list/16ksjbTPL11gn5QFxKHXtKiFVa3CLKOhACn7YTwjKWCg/3/public/values?alt=json", function(data) {
+
+      var sheetData = data.feed.entry;
+
+      var i;
+      for (i = 0; i < sheetData.length; i++) {
+
+        var a1 = data.feed.entry[i]['gsx$areaorigenfuente']['$t'];
+        var a2 = data.feed.entry[i]['gsx$actividadessuceso']['$t'];
+        var a3 = data.feed.entry[i]['gsx$subprocesouoperacióndetalles']['$t'];
+        var a4 = data.feed.entry[i]['gsx$aspectoambientalsensibilidaddelmedio']['$t'];
+        var a5 = data.feed.entry[i]['gsx$tipo']['$t'];
+        var a6 = data.feed.entry[i]['gsx$impactoambientalefecto']['$t'];
+        var a7 = data.feed.entry[i]['gsx$descripcion']['$t'];
+        var a8 = data.feed.entry[i]['gsx$materialnombrecomercial']['$t'];
+        var a9 = data.feed.entry[i]['gsx$quimico']['$t'];
+        var a10 = data.feed.entry[i]['gsx$ncasna-noaplica']['$t'];
+        var a11 = data.feed.entry[i]['gsx$nombredelcontenedor']['$t'];
+        var a12 = data.feed.entry[i]['gsx$directoindirecto']['$t'];
+        var a13 = data.feed.entry[i]['gsx$sensibilidaddelmedio']['$t'];
+        var a14 = data.feed.entry[i]['gsx$magnitud']['$t'];
+        var a15 = data.feed.entry[i]['gsx$toxicidadpeligro']['$t'];
+        var a16 = data.feed.entry[i]['gsx$normal']['$t'];
+        var a17 = data.feed.entry[i]['gsx$anormal']['$t'];
+        var a18 = data.feed.entry[i]['gsx$accidenteincid.']['$t'];
+        var a19 = data.feed.entry[i]['gsx$ndecontenedoralqueseintegran']['$t'];
+        var a20 = data.feed.entry[i]['gsx$cuestionesinternasexternas']['$t'];
+        var a21 = data.feed.entry[i]['gsx$probabilidad']['$t'];
+        var a22 = data.feed.entry[i]['gsx$gradoderiesgo']['$t'];
+        var a23 = data.feed.entry[i]['gsx$significancia']['$t'];
+        var a24 = data.feed.entry[i]['gsx$sepuedeinfluir']['$t'];
+        var a25 = data.feed.entry[i]['gsx$partesinteresadas']['$t'];
+        var a26 = data.feed.entry[i]['gsx$analisisdegrupodeinteres']['$t'];
+        var a27 = data.feed.entry[i]['gsx$controlfísico']['$t'];
+        var a28 = data.feed.entry[i]['gsx$controladministrativo']['$t'];
+        var a29 = data.feed.entry[i]['gsx$sepuedeinfluir']['$t'];
+        var a30 = data.feed.entry[i]['gsx$puntosqueabordaporaspectoambiental']['$t'];
+        var a31 = data.feed.entry[i]['gsx$requisitoslegalesaplicables']['$t'];
+        var a32 = data.feed.entry[i]['gsx$requisitoslegalesaplicablesb']['$t'];
+
+        $(document).ready(function() {
+          $('.modal').modal();
+          $('.collapsible').collapsible();
+          $('.tooltipped').tooltip();
+        });
+
+
+        document.getElementById('demo').innerHTML += (
+          '<tr>' +
+          '<td>' +
+          a1 +
+          '</td>' +
+          '<td>' +
+          a2 +
+          '</td>' +
+          '<td>' +
+          a3 +
+          '</td>' +
+          '<td>' +
+          a4 +
+          '</td>' +
+          '<td>' +
+          a5 +
+          '</td>' +
+          '<td>' +
+          a6 +
+          '</td>' +
+          '<td>' +
+          a7 +
+          '</td>' +
+          '<td>' +
+          a8 +
+          '</td>' +
+
+          '<td>' +
+          '<ul class="collapsible">' +
+          '<li>' +
+          '<div class="collapsible-header" style="width: 150px"><i class="material-icons">arrow_drop_down</i>Ver</div>' +
+          '  <div class="collapsible-body"><span>' + a9 + '</span></div>' +
+          '</li>' +
+          '</ul> ' +
+          '</td>' +
+
+          '<td>' +
+          '<ul class="collapsible">' +
+          '<li>' +
+          '<div class="collapsible-header" style="width: 150px"><i class="material-icons">arrow_drop_down</i>Ver</div>' +
+          '  <div class="collapsible-body"><span>' + a10 + '</span></div>' +
+          '</li>' +
+          '</ul> ' +
+          '</td>' +
+
+          '<td>' +
+          a11 +
+          '</td>' +
+          '<td>' +
+          a12 +
+          '</td>' +
+          '<td>' +
+          a13 +
+          '</td>' +
+          '<td>' +
+          a14 +
+          '</td>' +
+          '<td>' +
+          a15 +
+          '</td>' +
+          '<td>' +
+          a16 +
+          '</td>' +
+          '<td>' +
+          a17 +
+          '</td>' +
+          '<td>' +
+          a18 +
+          '</td>' +
+          '<td>' +
+          a19 +
+          '</td>' +
+          '<td>' +
+          a20 +
+          '</td>' +
+          '<td>' +
+          a21 +
+          '</td>' +
+          '<td>' +
+          a22 +
+          '</td>' +
+          '<td>' +
+          a23 +
+          '</td>' +
+          '<td>' +
+          a24 +
+          '</td>' +
+          '<td>' +
+          a25 +
+          '</td>' +
+          '<td>' +
+          a26 +
+          '</td>' +
+          '<td>' +
+          a27 +
+          '</td>' +
+
+          '<td>' +
+          '<ul class="collapsible">' +
+          '<li>' +
+          '<div class="collapsible-header" style="width: 150px"><i class="material-icons">arrow_drop_down</i>Ver</div>' +
+          '  <div class="collapsible-body"><span>' + a28 + '</span></div>' +
+          '</li>' +
+          '</ul> ' +
+          '</td>' +
+
+          '<td>' +
+          a29 +
+          '</td>' +
+
+          '<td>' +
+          '<ul class="collapsible">' +
+          '<li>' +
+          '<div class="collapsible-header" style="width: 350px"><i class="material-icons">arrow_drop_down</i>Ver</div>' +
+          '  <div class="collapsible-body"><span>' + a30 + '</span></div>' +
+          '</li>' +
+          '</ul> ' +
+          '</td>' +
+
+          '<td>' +
+          '<ul class="collapsible">' +
+          '<li>' +
+          '<div class="collapsible-header" style="width: 150px"><i class="material-icons">arrow_drop_down</i>Ver</div>' +
+          '  <div class="collapsible-body"><span>' + a31 + '</span></div>' +
+          '</li>' +
+          '</ul> ' +
+          '</td>' +
+
+          '<td>' +
+          '<ul class="collapsible" >' +
+          '<li>' +
+          '<div class="collapsible-header" style="width: 450px"><i class="material-icons">arrow_drop_down</i>Ver</div>' +
+          '  <div class="collapsible-body"><span>' + a32 + '</span></div>' +
+          '</li>' +
+          '</ul> ' +
+          '</td>' +
+
+          '</tr>'
+        );
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.collapsible');
+      var instances = M.Collapsible.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function() {
+      $('.collapsible').collapsible();
+      $('.tooltipped').tooltip();
+      $('.pushpin').pushpin();
+    });
+  </script>
+
+  <style media="screen" type="text/css">
+    .collapsible-header {
+      style="width: 150px;
+padding-right: 5px;
+      padding-left: 5px;
+      padding-bottom: 2px;
+      padding-top: 2px;
+    }
+  </style>
+
+</body>
+
+</html>
